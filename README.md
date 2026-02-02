@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌍 EcoSmart Bin: AI-Powered E-Waste Lifecycle Management
+EcoSmart Bin is a next-generation recycling ecosystem designed to solve the global e-waste crisis by bridging the gap between user uncertainty and actionable disposal. By utilizing Computer Vision for item appraisal and Real-time GIS for bin locating, we turn complex waste management into a rewarding, seamless experience.
 
-## Getting Started
+🏆 Project Objectives
+Developed for the 2026 Smart City Hackathon, this system adheres to five core UX-first principles:
 
-First, run the development server:
+Intelligence: Automatic identification of complex electronic items.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Accessibility: Mobile-first navigation with ≤ 3 interactions to find a bin.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Incentivization: Direct correlation between recycling and digital rewards.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Transparency: Explaining AI decisions to build user trust.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Scalability: Centralized monitoring for urban waste administrators.
 
-## Learn More
+✨ Key Features
+🧠 1. AI Visual Appraisal
+TensorFlow.js & MobileNet v2: High-accuracy, client-side image classification that runs in the browser.
 
-To learn more about Next.js, take a look at the following resources:
+Smart Categorization: A logic-mapped dictionary that translates raw AI labels (e.g., "iPod") into actionable e-waste categories (e.g., "Smartphone").
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dynamic Valuation: Real-time estimation of item value and environmental impact (CO2 offset) per scan.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📍 2. Precision Bin Locator
+Interactive Leaflet.js Map: Real-time visualization of bin health, fill levels, and operational status synced via Firebase Firestore.
 
-## Deploy on Vercel
+Google Maps Navigation: Deep-link integration for immediate turn-by-turn directions to the selected disposal node.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📊 3. Admin Command Center
+Fleet Telemetry: Geographic overview of all active bins with critical fill-level alerts.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Waste Composition Analytics: Visual breakdowns of collected material types to help optimize recycling logistics.
+
+🛠️ Technical Stack
+Framework: Next.js 15 (App Router)
+
+Language: TypeScript (Type-Safe Interface Architecture)
+
+Database: Firebase Firestore (Real-time NoSQL)
+
+AI/ML: TensorFlow.js
+
+Maps: Leaflet.js & React-Leaflet
+
+Styling: Tailwind CSS & Framer Motion
+
+📂 Architecture Overview
+Plaintext
+src/
+├── app/             # Page routing (Home, Admin Dashboard)
+├── components/      # Functional UI (Scanner, Map Engine, Leaderboard)
+├── hooks/           # Custom data streams (use-bins real-time hook)
+├── lib/             # API & Firebase SDK configurations
